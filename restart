@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#path of adb in ''
+adb='adb'
+
+# Replace this value to push to different release channels.
+# Nightly = org.mozilla.fennec
+# Aurora = org.mozilla.fennec_aurora
+# Beta = org.mozilla.firefox_beta
+# Release = org.mozilla.firefox
+ANDROID_APP_ID=org.mozilla.firefox
+
+$adb shell am force-stop $ANDROID_APP_ID && \
+
+$adb shell am start -a android.intent.action.VIEW \
+                   -c android.intent.category.DEFAULT \
+                   -n $ANDROID_APP_ID/.App

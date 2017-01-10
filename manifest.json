@@ -1,0 +1,41 @@
+{
+  "description": "Redirects certain web pages",
+  "manifest_version": 2,
+  "name": "Site Block",
+  "version": "1.0",
+
+  "applications": {
+    "gecko": {
+      "id": "evans@evanshauser.com",
+      "strict_min_version": "42.0",
+      "strict_max_version": "51.*",
+      "update_url": "https://example.com/updates.json"
+    }
+  },
+
+  "permissions": [
+    "webRequest", "webRequestBlocking"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*",
+        "*://*.facebook.com/*",
+        "*://*.nba.com/*",
+        "*://*.reddit.com/*",
+        "*://*.kongregate.com/*",
+        "*://*.espn.com/*",
+        "*://*.go.com/*",
+        "*://*.movie4k.to/*"
+
+      ],
+      "js": ["blocker.js"]
+    }
+  ]//,
+
+  //Firefox for android currently does not use background scripts
+  //"background": {
+  //  "scripts": ["background.js"]
+  //}
+}
