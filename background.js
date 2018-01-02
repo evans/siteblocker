@@ -1,16 +1,37 @@
 var youtube = "*://*.youtube.com/*";
 var mozilla = "*://mdn.mozillademos.org/*";
 
-function redirect(requestdetails) {
-  console.log("cancelling: " + requestdetails.url);
-  return {
-    cancel : true
-    //redirecturl: "https://38.media.tumblr.com/tumblr_ldbj01lzip1qe0eclo1_500.gif"
-  };
-}
+//function redirect(requestdetails) {
+//  console.log("cancelling: " + requestdetails.url);
+//  return {
+//    cancel : true
+//    //redirecturl: "https://38.media.tumblr.com/tumblr_ldbj01lzip1qe0eclo1_500.gif"
+//  };
+//}
 
-browser.webrequest.onbeforerequest.addlistener(
-  redirect,
-  {urls:[youtube, mozilla]},
+browser.webRequest.onBeforeRequest.addListener(
+  function(details) {
+    return {
+      cancel: true,
+    }
+  },             // function
+  {
+    urls: [
+      "*://*.youtube.com/*",
+      "*://*.facebook.com/*",
+      "*://*.nba.com/*",
+      // "*://*.reddit.com/*",
+      "*://*.kongregate.com/*",
+      "*://*.espn.com/*",
+      "*://*.go.com/*",
+      "*://*.movie4k.to/*"
+    ]
+  },               //  object
   ["blocking"]
-);
+)
+
+// browser.webrequest.onbeforerequest.addlistener(
+//   redirect,
+//   {urls:[youtube, mozilla]},
+//   ["blocking"]
+// );
