@@ -1,0 +1,29 @@
+{
+  "name": "siteblocker",
+  "version": "1.0.0",
+  "description":
+    "**This add-on injects JavaScript into web pages. The `addons.mozilla.org` domain disallows this operation, so this add-on will not work properly when it's run on pages in the `addons.mozilla.org` domain.**",
+  "main": "background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "prettier --trailing-comma all --write **/*.json **/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evanshauser/siteblocker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evanshauser/siteblocker/issues"
+  },
+  "homepage": "https://github.com/evanshauser/siteblocker#readme",
+  "dependencies": {
+    "jsonwebtoken": "^8.1.0",
+    "sign-addon": "^0.2.2"
+  },
+  "devDependencies": {
+    "prettier": "1.9.2"
+  }
+}
