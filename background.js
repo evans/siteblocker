@@ -1,5 +1,5 @@
-var youtube = "*://*.youtube.com/*";
-var mozilla = "*://mdn.mozillademos.org/*";
+var youtube = '*://*.youtube.com/*';
+var mozilla = '*://mdn.mozillademos.org/*';
 
 //function redirect(requestdetails) {
 //  console.log("cancelling: " + requestdetails.url);
@@ -12,25 +12,25 @@ var mozilla = "*://mdn.mozillademos.org/*";
 browser.webRequest.onBeforeRequest.addListener(
   function(details) {
     return {
-      cancel: true
+      cancel: true,
     };
   }, // function
   {
     urls: [
-      "*://*.youtube.com/*",
-      "https://news.ycombinator.com/",
-      "*://news.ycombinator.com/*",
-      "*://*.ycombinator.com/*",
-      "*://*.facebook.com/*",
-      "*://*.nba.com/*",
-      // "*://*.reddit.com/*",
-      "*://*.kongregate.com/*",
-      "*://*.espn.com/*",
-      "*://*.go.com/*",
-      "*://*.movie4k.to/*"
-    ]
+      '*://*.youtube.com/*',
+      'https://news.ycombinator.com/',
+      '*://news.ycombinator.com/*',
+      '*://*.ycombinator.com/*',
+      '*://*.facebook.com/*',
+      '*://*.nba.com/*',
+      '*://*.reddit.com/*',
+      '*://*.kongregate.com/*',
+      '*://*.espn.com/*',
+      '*://*.go.com/*',
+      '*://*.movie4k.to/*',
+    ],
   }, //  object
-  ["blocking"]
+  ['blocking'],
 );
 
 // browser.webrequest.onbeforerequest.addlistener(
