@@ -12,9 +12,9 @@ var mozilla = "*://mdn.mozillademos.org/*";
 browser.webRequest.onBeforeRequest.addListener(
   function(details) {
     return {
-      cancel: true,
-    }
-  },             // function
+      cancel: true
+    };
+  }, // function
   {
     urls: [
       "*://*.youtube.com/*",
@@ -29,9 +29,9 @@ browser.webRequest.onBeforeRequest.addListener(
       "*://*.go.com/*",
       "*://*.movie4k.to/*"
     ]
-  },               //  object
+  }, //  object
   ["blocking"]
-)
+);
 
 // browser.webrequest.onbeforerequest.addlistener(
 //   redirect,
