@@ -1,6 +1,6 @@
 #!/bin/bash
 
-XPI=./site_block-0.1-fx.xpi
+XPI=${1:-"site_block-0.1-fx.xpi"}
 
 #Path to adb in ''
 adb='adb'
@@ -15,8 +15,9 @@ ANDROID_APP_ID=org.mozilla.firefox
 # Push the add-on to your device to test
 $adb push "$XPI" mnt/sdcard/"$XPI" #&& \
 
+sed -e "s/NEW_BUILD/.\/$XPI/" install.html > /tmp/install.html
 # Push an HTML page to link to add-on
-$adb push install.html mnt/sdcard/install.html #&& \
+$adb push /tmp/install.html mnt/sdcard/install.html #&& \
 
 $adb shell am start -a android.intent.action.VIEW \
                    -c android.intent.category.DEFAULT \

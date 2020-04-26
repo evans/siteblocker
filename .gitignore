@@ -1,2 +1,4 @@
 build.xpi
+*.xpi
+creds
 .DS_Store

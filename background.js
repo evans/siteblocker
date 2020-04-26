@@ -18,7 +18,9 @@ browser.webRequest.onBeforeRequest.addListener(
   {
     urls: [
       "*://*.youtube.com/*",
-      "*://*news.ycombinator.com/*",
+      "https://news.ycombinator.com/",
+      "*://news.ycombinator.com/*",
+      "*://*.ycombinator.com/*",
       "*://*.facebook.com/*",
       "*://*.nba.com/*",
       // "*://*.reddit.com/*",
