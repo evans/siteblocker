@@ -28,6 +28,7 @@ browser.webRequest.onBeforeRequest.addListener(
       '*://*.espn.com/*',
       '*://*.go.com/*',
       '*://*.movie4k.to/*',
+      '*://*.soundcloud.com/*',
     ],
   }, //  object
   ['blocking'],
