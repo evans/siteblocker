@@ -2,7 +2,7 @@
   "description": "Redirects certain web pages",
   "manifest_version": 2,
   "name": "Site Block",
-  "version": "0.1.3",
+  "version": "0.1.4",
 
   "applications": {
     "gecko": {
@@ -12,19 +12,7 @@
     }
   },
 
-  "permissions": [
-    "<all_urls>",
-    "*://*.youtube.com/*",
-    "*://*.facebook.com/*",
-    "*://*.nba.com/*",
-    "*://*.reddit.com/*",
-    "*://*.kongregate.com/*",
-    "*://*.espn.com/*",
-    "*://*.go.com/*",
-    "*://*.movie4k.to/*",
-    "webRequest",
-    "webRequestBlocking"
-  ],
+  "permissions": ["<all_urls>", "webRequest", "webRequestBlocking"],
 
   "background": {
     "scripts": ["background.js"]
